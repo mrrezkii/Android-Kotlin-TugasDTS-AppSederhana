@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_chat.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/drawable/ic_maps.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/drawable/icon_rounded_corner.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/drawable/layout_rounded_corner.xml" value="0.10625" />
         <entry key="app/src/main/res/drawable/tablayout_rounded_corner.xml" value="0.2082051282051282" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/adapter_list_artikel.xml" value="0.1796875" />
@@ -19,6 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_notifikasi.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_pesanan.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_riwayat_pesanan.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/item_image_slider.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/toolbar_noback.xml" value="0.1953125" />
         <entry key="app/src/main/res/menu/menu_bottomnav.xml" value="0.1953125" />
       </map>
