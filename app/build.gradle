@@ -60,4 +60,5 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'com.airbnb.android:lottie:3.6.0'
+    implementation 'com.tbuonomo:dotsindicator:4.2'
 }
