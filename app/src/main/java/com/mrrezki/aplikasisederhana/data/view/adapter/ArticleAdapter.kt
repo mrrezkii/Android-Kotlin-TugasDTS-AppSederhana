@@ -8,12 +8,15 @@ import com.esdsquad.piknik.data.model.ArticelModel
 import com.mrrezki.aplikasisederhana.databinding.AdapterListArtikelBinding
 
 class ArticleAdapter(
-    var articels: ArrayList<ArticelModel>
+    var articels: ArrayList<ArticelModel>,
+    val listerner: OnAdapterListener
 ) : RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
 
+    interface OnAdapterListener {
+        fun onClick(result: ArticelModel)
+    }
 
     class ViewHolder(val binding: AdapterListArtikelBinding) : RecyclerView.ViewHolder(binding.root)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         AdapterListArtikelBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,6 +29,9 @@ class ArticleAdapter(
             .load(new.photo)
             .centerCrop()
             .into(holder.binding.ivArtikel)
+        holder.binding.container.setOnClickListener {
+            listerner.onClick(new)
+        }
     }
 
     override fun getItemCount() = articels.size

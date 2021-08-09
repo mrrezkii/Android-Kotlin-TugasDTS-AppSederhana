@@ -1,5 +1,6 @@
 package com.mrrezki.aplikasisederhana.data.view.fragment.bottomnav
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.esdsquad.piknik.data.view.adapter.ArticleAdapter
 import com.esdsquad.piknik.data.view.adapter.PopulerAdapter
 import com.mrrezki.aplikasisederhana.R
 import com.mrrezki.aplikasisederhana.data.model.PopulerModel
+import com.mrrezki.aplikasisederhana.data.view.activity.DetailArticleActivity
 import com.mrrezki.aplikasisederhana.data.view.adapter.ImageSliderAdapter
 import com.mrrezki.aplikasisederhana.databinding.FragmentBerandaBinding
 
@@ -107,24 +109,33 @@ class BerandaFragment : Fragment() {
             ArticelModel(
                 1,
                 "PPKM Tahap Dua Kota Bandung Dimulai, Ini Daftar Perubahan Aturannya",
-                "https://pict.sindonews.net/dyn/620/pena/news/2021/01/27/701/315478/ppkm-tahap-dua-kota-bandung-dimulai-ini-daftar-perubahan-aturannya-kmx.png"
+                "https://pict.sindonews.net/dyn/620/pena/news/2021/01/27/701/315478/ppkm-tahap-dua-kota-bandung-dimulai-ini-daftar-perubahan-aturannya-kmx.png",
+                "https://daerah.sindonews.com/read/315478/701/ppkm-tahap-dua-kota-bandung-dimulai-ini-daftar-perubahan-aturannya-1611723694"
             )
         )
         listAdapter.add(
             ArticelModel(
                 2,
                 "Aturan Lengkap PPKM Darurat di Jawa-Bali Selama 3-20 Juli",
-                "https://akcdn.detik.net.id/visual/2021/06/23/jokowi_169.jpeg"
+                "https://akcdn.detik.net.id/visual/2021/06/23/jokowi_169.jpeg",
+                "https://www.cnnindonesia.com/nasional/20210701124917-20-661769/aturan-lengkap-ppkm-darurat-di-jawa-bali-selama-3-20-juli"
             )
         )
         listAdapter.add(
             ArticelModel(
                 3,
                 "Mengenal apa itu Staycation, Kamu harus coba konsep ini",
-                "https://ik.imagekit.io/tvlk/blog/2020/01/Staycation-1-Pixabay.jpg"
+                "https://ik.imagekit.io/tvlk/blog/2020/01/Staycation-1-Pixabay.jpg",
+                "https://www.traveloka.com/id-id/explore/activities/apa-itu-staycation-acc/20037"
             )
         )
-        adapterArticle = ArticleAdapter(listAdapter)
+        adapterArticle = ArticleAdapter(listAdapter, object : ArticleAdapter.OnAdapterListener {
+            override fun onClick(result: ArticelModel) {
+                val intent = Intent(view!!.context, DetailArticleActivity::class.java)
+                intent.putExtra("url", result.url)
+                startActivity(intent)
+            }
+        })
         binding.listArtikel.adapter = adapterArticle
     }
 
