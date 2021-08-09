@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/navigation_beranda">
+
+    <fragment
+        android:id="@+id/navigation_beranda"
+        android:name="com.mrrezki.aplikasisederhana.data.view.fragment.BerandaFragment"
+        android:label="BerandaFragment" />
+    <fragment
+        android:id="@+id/navigation_pesanan"
+        android:name="com.mrrezki.aplikasisederhana.data.view.fragment.PesananFragment"
+        android:label="PesananFragment" />
+    <fragment
+        android:id="@+id/navigation_notifikasi"
+        android:name="com.mrrezki.aplikasisederhana.data.view.fragment.NotifikasiFragment"
+        android:label="NotifikasiFragment" />
+    <fragment
+        android:id="@+id/navigation_akun"
+        android:name="com.mrrezki.aplikasisederhana.data.view.fragment.AkunFragment"
+        android:label="fragment_akun"
+        tools:layout="@layout/fragment_akun" />
+</navigation>
